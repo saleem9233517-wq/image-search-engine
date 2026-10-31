@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelFind - Image Search Engine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Pixel<span>Find.</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Explore</a>
+        </nav>
+
+        <div class="nav-label">PHOTO DISCOVERY</div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+
+            <p class="hero-tag">DISCOVER THE WORLD IN IMAGES</p>
+
+            <h1>
+                Find images that<br>
+                <span>inspire you.</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore beautiful photography from around the world.
+                Search anything and discover something amazing.
+            </p>
+
+            <form id="searchForm" class="search-form">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search mountains, nature, cars..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search
+                </button>
+            </form>
+
+            <div class="popular-searches">
+                <span>Popular:</span>
+                <button class="suggestion" data-query="Nature">Nature</button>
+                <button class="suggestion" data-query="Architecture">Architecture</button>
+                <button class="suggestion" data-query="Travel">Travel</button>
+                <button class="suggestion" data-query="Technology">Technology</button>
+            </div>
+
+        </section>
+
+        <section class="gallery-section" id="gallery">
+
+            <div class="gallery-heading">
+                <div>
+                    <p class="section-label">YOUR VISUAL COLLECTION</p>
+                    <h2 id="galleryTitle">Explore Photos</h2>
+                </div>
+
+                <p id="resultCount">Discover something beautiful</p>
+            </div>
+
+            <p id="statusMessage" class="status-message">
+                Search for something to explore amazing photographs.
+            </p>
+
+            <div id="imageGallery" class="image-gallery"></div>
+
+            <button id="loadMoreButton" class="load-more" hidden>
+                Load More Images
+            </button>
+
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">Pixel<span>Find.</span></a>
+        <p>Discover. Explore. Get Inspired.</p>
+        <p class="copyright">Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="modal" hidden>
+        <button id="closeModal" class="close-modal" aria-label="Close preview">
+            &times;
+        </button>
+
+        <img id="modalImage" src="" alt="Large image preview">
+
+        <p id="modalCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
